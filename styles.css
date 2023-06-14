@@ -52,10 +52,6 @@ p {
 
 /* Section Nav */
 .navegation {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
   background: var(--bg__sec);
   box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.2);
 }
@@ -209,7 +205,7 @@ p {
   -ms-transition: var(--trans);
   -o-transition: var(--trans);
   animation: logicon infinite 0.5s alternate forwards;
-  -webkit-animation: logicon infinite .5s alternate forwards;
+  -webkit-animation: logicon infinite 0.5s alternate forwards;
 }
 
 @keyframes logicon {
@@ -302,4 +298,11 @@ p {
 
 .loging__user:hover .loging__name {
   color: var(--bg__sl);
+}
+
+/* Section body */
+.section__main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  font-size: 8rem;
 }
