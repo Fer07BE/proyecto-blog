@@ -23,6 +23,7 @@ html {
   --fw-titulos: 700; /* font weight */
   --font-p: 1.6rem; /* font text */
   --font-s: 1.4rem; /* font small */
+  --font-t: 3rem; /* font tittles */
   --trans: all 0.5s; /* transition */
 }
 
@@ -48,6 +49,10 @@ p {
 
 .titulos {
   font-family: var(--titulos);
+}
+
+.pg {
+  padding: 6.4rem 0;
 }
 
 /* Section Nav */
@@ -300,9 +305,95 @@ p {
   color: var(--bg__sl);
 }
 
-/* Section body */
+/* Section main */
 .section__main {
+  background: var(--bg__sl);
+}
+
+.section__header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  font-size: 8rem;
+}
+
+.section__articles {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 4.8rem;
+}
+
+.card__bloquote {
+  cursor: pointer;
+  font-size: var(--font-p);
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  color: rgba(33, 37, 41, 0.5);
+  transition: var(--trans);
+  -webkit-transition: var(--trans);
+  -moz-transition: var(--trans);
+  -ms-transition: var(--trans);
+  -o-transition: var(--trans);
+  position: relative;
+}
+
+.card__bloquote::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.4rem;
+  background: var(--text);
+  bottom: -2rem;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  opacity: 0;
+  transform-origin: left;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition-delay: .2s;
+}
+
+.card__bloquote:hover::before {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  opacity: 1;
+}
+
+.card__bloquote:hover {
+  color: rgba(33, 37, 41, 1);
+}
+
+.card__img {
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: var(--trans);
+  -webkit-transition: var(--trans);
+  -moz-transition: var(--trans);
+  -ms-transition: var(--trans);
+  -o-transition: var(--trans);
+}
+
+.card__bloquote:hover .card__img {
+  background: rgba(0, 0, 0, 1);
+}
+
+.card__tittle {
+  font-family: var(--titulos);
+  font-weight: var(--fw-titulos);
+  font-size: var(--font-t);
 }
