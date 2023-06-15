@@ -46,6 +46,11 @@ p {
   max-width: 90%;
   margin: 0 auto;
 }
+.container__2 {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-left: 0 ;
+}
 
 .titulos {
   font-family: var(--titulos);
