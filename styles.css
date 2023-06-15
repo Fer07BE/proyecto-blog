@@ -384,6 +384,17 @@ p {
   -ms-transition: var(--trans);
   -o-transition: var(--trans);
 }
+.card__bloquote1 {
+  font-size: var(--font-p);
+  align-items: center;
+  gap: 1.4rem;
+  transition: var(--trans);
+  -webkit-transition: var(--trans);
+  -moz-transition: var(--trans);
+  -ms-transition: var(--trans);
+  -o-transition: var(--trans);
+  
+}
 
 .card__bloquote:not(:last-of-type) {
   margin-bottom: 4.8rem;
@@ -408,6 +419,13 @@ p {
   -moz-transition: var(--trans);
   -ms-transition: var(--trans);
   -o-transition: var(--trans);
+}
+.aside__img {
+  display: inline-block;
+  width: 60rem;
+  height: 10rem;
+  background: rgba(0, 0, 0, 0.5);
+  
 }
 
 .card__bloquote:hover .card__img {
