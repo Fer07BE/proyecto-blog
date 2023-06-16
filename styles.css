@@ -27,6 +27,11 @@ html {
   --trans: all 0.5s; /* transition */
 }
 
+*::selection {
+  background: var(--text);
+  color: var(--bg__sl);
+} 
+
 body {
   font-family: "Times New Roman", Times, serif;
   hyphens: auto;
@@ -91,20 +96,20 @@ p {
   color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
   text-decoration: none;
-  transition: all .5s;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -ms-transition: all .5s;
-  -o-transition: all .5s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   position: relative;
   display: inline-block;
 }
 
 .nav__logo-a::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
-  height: .2rem;
+  height: 0.2rem;
   background: var(--text);
   top: 50%;
   opacity: 0;
@@ -393,7 +398,6 @@ p {
   -moz-transition: var(--trans);
   -ms-transition: var(--trans);
   -o-transition: var(--trans);
-  
 }
 
 .card__bloquote:not(:last-of-type) {
@@ -419,13 +423,6 @@ p {
   -moz-transition: var(--trans);
   -ms-transition: var(--trans);
   -o-transition: var(--trans);
-}
-.aside__img {
-  display: inline-block;
-  width: 60rem;
-  height: 10rem;
-  background: rgba(0, 0, 0, 0.5);
-  
 }
 
 .card__bloquote:hover .card__img {
@@ -485,4 +482,34 @@ p {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Section Aside */
+.aside__article {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside__article:not(:last-of-type) {
+  margin-bottom: 3.6rem;
+}
+
+.aside__img {
+  display: inline-block;
+  width: 100%;
+  height: 20rem;
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.2rem;
+}
+
+.aside__title {
+  font-size: var(--font-t);
+  font-weight: var(--fw-titulos);
+  font-family: sans-serif;
+}
+
+.aside__text {
+  font-size: var(--font-p);
 }
