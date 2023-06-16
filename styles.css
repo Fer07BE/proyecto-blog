@@ -430,9 +430,11 @@ p {
 }
 
 .card__text {
+  text-decoration: none;
   display: inline-block;
   position: relative;
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .card__text::before {
